@@ -1,0 +1,67 @@
+services:
+  # Backend API Service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: aegisai-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - VIDEO_SOURCE=0
+      - FRAME_SAMPLE_RATE=2
+      - DB_PATH=/data/aegis.db
+      - EVIDENCE_DIR=/app/evidence
+      - LOG_LEVEL=INFO
+      # FIXED: Allow both localhost AND internal Docker network
+      - CORS_ORIGINS=["http://localhost:3000","http://frontend:3000","http://127.0.0.1:3000","http://0.0.0.0:3000"]
+    volumes:
+      - ./evidence:/app/evidence
+      - ./data:/data
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - aegisai-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Frontend Dashboard Service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_GEMINI_API_KEY: ${GEMINI_API_KEY}
+        # Build-time variable (used during npm build)
+        VITE_API_URL: http://localhost:8000
+    container_name: aegisai-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      # Runtime variable (overrides build-time for dev mode)
+      - VITE_GEMINI_API_KEY=${GEMINI_API_KEY}
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - aegisai-network
+
+networks:
+  aegisai-network:
+    driver: bridge
+
+volumes:
+  evidence:
+    driver: local
+  data:
+    driver: local
+  logs:
+    driver: local
