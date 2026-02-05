@@ -299,14 +299,14 @@ Future releases will integrate standard protocols including **MQTT, Zigbee, and 
 
 ## Documentation
 
+### Deployment & Testing
+- [**Verification Guide**](./docs/VERIFICATION_TESTING_GUIDE.md) - Complete testing procedures
+
 ### Core Documentation
-- [**White Paper**](./docs/NeuroAegis Cortex - White Paper.pdf) - Conceptual foundations and research
+- [**Live DEMO**](/docs/LIVE%20DEMO.md)
 - [**Technical Documentation**](./docs/TECHNICAL_DOCUMENTATION.md) - Complete system architecture
 - [**Architecture Guide**](./docs/ARCHITECTURE.md) - Visual system design
 - [**API Reference**](http://localhost:8000/docs) - Interactive Swagger UI
-
-### Deployment & Testing
-- [**Verification Guide**](./docs/VERIFICATION_TESTING_GUIDE.md) - Complete testing procedures
 ---
 
 ## Performance Benchmarks
@@ -462,6 +462,6 @@ MIT License - See [LICENSE](LICENSE) file for details.
 **The future of physical security is not defined by passive observation,**  
 **but by understanding, anticipation, and informed action.**
 
-[Documentation](./docs/) • [Get Started](/docs/VERIFICATION_TESTING_GUIDE.md) • [Live DEMO](/docs/LIVE%20DEMO.md) • [White Paper](./docs/NeuroAegis Cortex - White Paper.pdf) • [Contributing](./CONTRIBUTING.md)
+[Documentation](./docs/) • [Get Started](/docs/VERIFICATION_TESTING_GUIDE.md) • [Live DEMO](/docs/LIVE%20DEMO.md) • [Contributing](./CONTRIBUTING.md)
 
 </div>
