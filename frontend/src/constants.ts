@@ -7,7 +7,7 @@ export const SYSTEM_NAME = "NeuroAegisCortex";
 export const SYSTEM_VERSION = "3.0.0";
 
 export const API_CONFIG = {
-  BASE_URL: import.meta.env.VITE_API_URL || 'http://localhost:8000/api',
+  BASE_URL: import.meta.env.VITE_API_URL || 'http://localhost:8000',
   RETRY_ATTEMPTS: 3,
   TIMEOUT: 10000
 };

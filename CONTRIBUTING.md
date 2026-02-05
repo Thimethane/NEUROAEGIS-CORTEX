@@ -60,14 +60,14 @@ Before contributing, ensure you have:
 
 ```bash
 # 1. Fork the repository on GitHub
-# Click "Fork" button at https://github.com/Thimethane/aegisai
+# Click "Fork" button at https://github.com/Thimethane/NEUROAEGIS-CORTEX
 
 # 2. Clone your fork
-git clone https://github.com/YOUR_USERNAME/aegisai.git
+git clone https://github.com/Thimethane/NEUROAEGIS-CORTEX
 cd aegisai
 
 # 3. Add upstream remote
-git remote add upstream https://github.com/Thimethane/aegisai.git
+git remote add upstream https://github.com/Thimethane/NEUROAEGIS-CORTEX
 
 # 4. Verify remotes
 git remote -v
@@ -669,8 +669,8 @@ We value all contributions:
 
 ## ❓ Questions?
 
-- **Technical Questions**: [GitHub Discussions](https://github.com/Thimethane/aegisai/discussions)
-- **Bug Reports**: [GitHub Issues](https://github.com/Thimethane/aegisai/issues)
+- **Technical Questions**: [GitHub Discussions](https://github.com/Thimethane/NEUROAEGIS-CORTEX/discussions)
+- **Bug Reports**: [GitHub Issues](https://github.com/Thimethane/NEUROAEGIS-CORTEX/issues)
 - **Security Issues**: security@aegisai.dev (private)
 
 ---
@@ -699,4 +699,4 @@ We value all contributions:
 
 ---
 
-*Last Updated: January 2026*
+*Last Updated: February 2026*

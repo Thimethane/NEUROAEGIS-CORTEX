@@ -18,7 +18,7 @@ Get AegisAI running with **Gemini 3.0** in 5 minutes.
 ### Step 1: Clone Repository (30 seconds)
 
 ```bash
-git clone https://github.com/Thimethane/aegisai.git
+git clone https://github.com/Thimethane/NEUROAEGIS-CORTEX
 cd aegisai
 ```
 
@@ -293,79 +293,15 @@ npm run dev
 ## 🎓 Next Steps
 
 ### Learn More
-- **[Gemini 3 Features](GEMINI_3_FEATURES.md)** - Deep dive into capabilities
-- **[Configuration Guide](CONFIGURATION.md)** - Advanced settings
-- **[API Documentation](API_DOCUMENTATION.md)** - Backend API reference
-
-### Production Deployment
-- **[Deployment Guide](DEPLOYMENT.md)** - Cloud deployment
-- **[Scaling Guide](SCALING.md)** - Multi-camera setup
-- **[Security Best Practices](SECURITY.md)** - Production hardening
+- **[Gemini 3 Features](/docs/GEMINI_3_FEATURES.md)** - Deep dive into capabilities
+- **[API Documentation](/docs/API_DOCUMENTATION.md)** - Backend API reference
 
 ### Development
 - **[Contributing Guide](CONTRIBUTING.md)** - Join the project
-- **[Architecture](ARCHITECTURE.md)** - System design
-- **[Testing Guide](TEST_GUIDE.md)** - Test scenarios
-
+- **[Architecture](/docs/ARCHITECTURE.md)** - System design
+- **[Testing Guide](/docs/VERIFICATION_TESTING_GUIDE.md)** - Test scenarios
 ---
 
-## ✅ Success Checklist
-
-Before moving to production, verify:
-
-- [ ] ✅ Gemini 3 Flash initialized successfully
-- [ ] ✅ Camera access working
-- [ ] ✅ Threat detection working (test with gun gesture)
-- [ ] ✅ Dashboard updating in real-time
-- [ ] ✅ No console errors (warnings OK)
-- [ ] ✅ Thought transparency showing AI reasoning
-- [ ] ✅ Response time < 3 seconds
-- [ ] ✅ Confidence scores reasonable (> 70%)
-
----
-
-## 💡 Pro Tips
-
-### Optimize for Speed
-```typescript
-// Use Flash model with low thinking
-model: 'gemini-3-flash-preview',
-thinkingLevel: 'low',
-mediaResolution: 'medium'
-// → 3x faster, 6x cheaper
-```
-
-### Optimize for Accuracy
-```typescript
-// Use Pro model with deep think
-model: 'gemini-3-pro-preview',
-thinkingLevel: 'high',
-mediaResolution: 'high'
-// → 30% more accurate, better reasoning
-```
-
-### Adaptive Configuration
-```typescript
-// Let AegisAI automatically choose
-// based on threat level and scene complexity
-ENABLE_ADAPTIVE_MODEL_SELECTION: true
-// → Best balance of speed, cost, and accuracy
-```
-
----
-
-## 🎉 You're Ready!
-
-**AegisAI is now running with Gemini 3.0**
-
-Next: Try the [Full Stack Mode](INTEGRATION.md) to unlock:
-- Incident storage and history
-- Automated response execution
-- Multi-user support
-- Advanced analytics
-
----
-
-**Questions?** Check [docs/](.) or open an [issue](https://github.com/Thimethane/aegisai/issues)
+**Questions?** Check [docs/](.) or open an [issue](https://github.com/Thimethane/NEUROAEGIS-CORTEX/issues)
 
 **Happy Monitoring!** 🛡️

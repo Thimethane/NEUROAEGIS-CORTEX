@@ -4,7 +4,7 @@ Add this to your routes.py file
 """
 
 from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, Field
 from typing import Optional
 import aiosmtplib
 from email.message import EmailMessage
@@ -12,25 +12,22 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-email_router = APIRouter(prefix="/api/email", tags=["email"])
+email_router = APIRouter(prefix="/email", tags=["email"])
 
 
 class SMTPConfig(BaseModel):
     host: str = "smtp.gmail.com"
     port: int = 587
     user: str
-    pass_: str  # Gmail App Password
+    pass_: str
 
 
 class EmailRequest(BaseModel):
     to: EmailStr
-    from_: EmailStr
+    from_: EmailStr = Field(alias="from")
     subject: str
     html: str
     smtpConfig: SMTPConfig
-
-    class Config:
-        fields = {'from_': 'from'}
 
 
 @email_router.post("/send")
