@@ -16,6 +16,8 @@
 > *"The modern physical security ecosystem suffers not from a lack of sensing infrastructure, but from a fundamental failure of interpretation."*
 
 NeuroAegis Cortex introduces a paradigm shift from **motion-centric surveillance** to **intent-based autonomous security intelligence**. By combining multimodal AI reasoning, temporal behavioral analysis, and a modular dual-agent architecture, the system enables proactive threat understanding while preserving privacy and operational sovereignty.
+---
+<img width="1686" height="974" alt="image" src="https://github.com/user-attachments/assets/b4ffcf7e-955a-4fce-bc3b-87266793cd65" />
 
 ---
 
